@@ -1,0 +1,55 @@
+<!doctype html><html><head><meta charset="utf-8"><style>
+* { margin:0; padding:0; box-sizing:border-box; }
+:root{
+  --red:#B5462F; --cream:#F3E6D0; --paper:#FBF5EA;
+  --green:#6B7A45; --brown:#3A2A20; --muted:#8A7A68;
+}
+html,body{ width:1080px; height:1350px; }
+.card{
+  width:1080px; height:1350px; background:var(--paper);
+  font-family:"WenQuanYi Zen Hei","Noto Sans CJK TC",sans-serif;
+  color:var(--brown); position:relative; overflow:hidden;
+  padding:96px 88px; display:flex; flex-direction:column;
+}
+.card::before{ /* 邊框內線，手作紙感 */
+  content:""; position:absolute; inset:44px; border:2px solid rgba(58,42,32,.18); border-radius:10px; pointer-events:none;
+}
+.brand{ font-size:34px; letter-spacing:.35em; color:var(--red); font-weight:700; }
+.brand .dot{ color:var(--green); }
+.kicker{ font-size:40px; color:var(--muted); margin-top:8px; letter-spacing:.06em; }
+.spacer{ flex:1; }
+h1{ font-size:110px; line-height:1.28; font-weight:700; letter-spacing:.02em; }
+h1 .red{ color:var(--red); }
+h1 .u{ border-bottom:10px solid var(--green); padding-bottom:6px; }
+.lead{ font-size:52px; line-height:1.6; color:#5A4A3C; margin-top:40px; }
+.tag{ display:inline-block; background:var(--red); color:#fff; font-size:40px;
+      padding:16px 34px; border-radius:999px; letter-spacing:.08em; }
+.pill-row{ display:flex; gap:26px; flex-wrap:wrap; margin-top:20px; }
+.pill{ background:#fff; border:3px solid var(--red); color:var(--red);
+       font-size:46px; font-weight:700; padding:22px 40px; border-radius:999px; }
+.no-row{ display:flex; flex-direction:column; gap:30px; margin-top:16px; }
+.no-item{ display:flex; align-items:center; gap:30px; font-size:70px; font-weight:700; }
+.no-x{ width:86px; height:86px; flex:0 0 86px; border-radius:50%; background:var(--red);
+       color:#fff; display:flex; align-items:center; justify-content:center; font-size:56px; }
+.rows{ display:flex; flex-direction:column; gap:36px; margin-top:10px; }
+.rowline{ display:flex; align-items:baseline; gap:28px; }
+.rowline .name{ font-size:64px; font-weight:700; color:var(--red); min-width:200px; }
+.rowline .desc{ font-size:44px; color:#5A4A3C; }
+.foot{ display:flex; align-items:center; justify-content:space-between; }
+.price{ font-size:56px; font-weight:700; }
+.price b{ color:var(--red); font-size:72px; }
+.cta{ background:var(--green); color:#fff; font-size:56px; font-weight:700;
+      text-align:center; padding:36px; border-radius:20px; letter-spacing:.06em; }
+.note{ font-size:36px; color:var(--muted); margin-top:26px; letter-spacing:.04em; }
+.big-num{ color:var(--red); font-weight:700; }
+.center{ text-align:center; align-items:center; justify-content:center; }
+.center h1{ text-align:center; }
+</style></head>
+<body><div class="card center">
+<div class="brand">阿嬤家之味<span class="dot"> · </span>ĀMĀ'S</div>
+<div class="spacer"></div>
+<h1>成為媽媽之後，<br>妳的一天<span class="red">很滿</span>。</h1>
+<div class="lead">工作、開會、接送、料理、深夜家事。<br>明天，再重來一次。</div>
+<div class="spacer"></div>
+<div><span class="tag">冷凍溫體黑豬排骨 · 氣炸 15 分鐘</span></div>
+</div></body></html>
