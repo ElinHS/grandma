@@ -474,24 +474,31 @@ body {
   display: flex;
   flex-direction: column;
 }
-/* 文青紙膠帶（washi tape）：半透明色底＋細斜紋＋兩端羽化撕邊 */
+/* 文青紙膠帶（washi tape）：半透明色底＋紙纖維紋路（斜紋／格紋交錯）＋兩端羽化撕邊 */
 .review-card::before {
   content: '';
   --tape: rgba(179,104,69,0.58);           /* 紅陶橘 terracotta */
+  /* 預設：斜紋 */
+  --weave: repeating-linear-gradient(45deg, rgba(255,255,255,0.22) 0 2px, rgba(255,255,255,0) 2px 6px);
   position: absolute;
   top: -13px; left: 50%;
   width: 88px; height: 27px;
   transform: translateX(-50%) rotate(-3deg);
-  background:
-    repeating-linear-gradient(45deg, rgba(255,255,255,0.22) 0 2px, rgba(255,255,255,0) 2px 6px),
-    var(--tape);
+  background: var(--weave), var(--tape);
   box-shadow: 0 1px 3px rgba(90,58,26,0.12);
   z-index: 2;
   -webkit-mask: linear-gradient(90deg, transparent 0, #000 7%, #000 93%, transparent 100%);
           mask: linear-gradient(90deg, transparent 0, #000 7%, #000 93%, transparent 100%);
 }
+/* 顏色：三色循環 */
 .review-card:nth-child(3n+2)::before { --tape: rgba(196,196,152,0.62); }  /* 橄欖卡其 olive */
 .review-card:nth-child(3n)::before   { --tape: rgba(70,97,125,0.52); }    /* 靛藍 navy */
+/* 紋路：雙數卡片改格紋，與斜紋交錯 */
+.review-card:nth-child(even)::before {
+  --weave:
+    repeating-linear-gradient(0deg,  rgba(255,255,255,0.20) 0 1.5px, rgba(255,255,255,0) 1.5px 8px),
+    repeating-linear-gradient(90deg, rgba(255,255,255,0.20) 0 1.5px, rgba(255,255,255,0) 1.5px 8px);
+}
 .review-card:nth-child(odd)  { transform: rotate(-1.2deg); }
 .review-card:nth-child(even) { transform: rotate(1.1deg); margin-top: 6px; }
 .review-card:hover {
