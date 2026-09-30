@@ -477,7 +477,7 @@ body {
 /* 文青紙膠帶（washi tape）：半透明色底＋細斜紋＋兩端羽化撕邊 */
 .review-card::before {
   content: '';
-  --tape: rgba(181,119,42,0.42);           /* 醬燒金 */
+  --tape: rgba(179,104,69,0.58);           /* 紅陶橘 terracotta */
   position: absolute;
   top: -13px; left: 50%;
   width: 88px; height: 27px;
@@ -490,8 +490,8 @@ body {
   -webkit-mask: linear-gradient(90deg, transparent 0, #000 7%, #000 93%, transparent 100%);
           mask: linear-gradient(90deg, transparent 0, #000 7%, #000 93%, transparent 100%);
 }
-.review-card:nth-child(3n+2)::before { --tape: rgba(78,126,107,0.34); }   /* 青瓷綠 */
-.review-card:nth-child(3n)::before   { --tape: rgba(194,59,46,0.34); }    /* 淡甕仔紅 */
+.review-card:nth-child(3n+2)::before { --tape: rgba(196,196,152,0.62); }  /* 橄欖卡其 olive */
+.review-card:nth-child(3n)::before   { --tape: rgba(70,97,125,0.52); }    /* 靛藍 navy */
 .review-card:nth-child(odd)  { transform: rotate(-1.2deg); }
 .review-card:nth-child(even) { transform: rotate(1.1deg); margin-top: 6px; }
 .review-card:hover {
