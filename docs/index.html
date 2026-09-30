@@ -1169,11 +1169,13 @@ html,body,h1,h2,h3,h4,h5,h6,p,div,span,a,strong,em,b,li,button,input,label,.htag
 .buy-card li{color:var(--ink-mid);font-size:14px;line-height:1.95;}
 .buy-card li b{color:var(--amber);}
 .buy-note{max-width:440px;margin:16px auto 0;text-align:center;font-size:12px;color:var(--ink-pale);letter-spacing:.5px;}
-.buy-price{display:flex;justify-content:center;gap:14px;margin:-14px 0 10px;flex-wrap:wrap;}
-.buy-price .pp{background:var(--paper-w);border:1px solid rgba(179,64,42,.18);border-radius:14px;padding:14px 22px;text-align:center;min-width:148px;}
-.buy-price .pp span{display:block;font-size:13px;color:var(--seal);font-weight:700;letter-spacing:1px;margin-bottom:4px;}
-.buy-price .pp b{font-size:30px;color:var(--amber);font-weight:700;}
-.buy-price .pp em{display:block;font-size:11px;color:var(--ink-pale);font-style:normal;margin-top:3px;}
+.buy-price{max-width:400px;margin:-8px auto 16px;border:1px solid rgba(179,64,42,.18);border-radius:14px;overflow:hidden;}
+.buy-price .ppr{display:flex;align-items:center;justify-content:space-between;gap:10px;padding:14px 18px;background:var(--paper-w);}
+.buy-price .ppr+.ppr{border-top:1px solid rgba(179,64,42,.12);}
+.buy-price .ppr .m{font-size:14px;font-weight:700;color:var(--seal);white-space:nowrap;}
+.buy-price .ppr .v{font-size:13px;color:var(--ink-mid);text-align:right;line-height:1.35;}
+.buy-price .ppr .v b{font-size:22px;color:var(--amber);font-weight:700;}
+.buy-price .ppr .v small{display:block;font-size:10.5px;color:var(--ink-pale);}
 .buy-price-note{text-align:center;font-size:12.5px;color:var(--ink-soft);margin:0 0 18px;letter-spacing:.5px;}
 .promo{max-width:460px;margin:0 auto 28px;background:rgba(194,59,46,.06);border:1px dashed rgba(194,59,46,.45);border-radius:14px;padding:14px 18px;text-align:center;}
 .promo .pr{font-size:14px;color:var(--ink-mid);line-height:1.85;}
@@ -1188,10 +1190,11 @@ html,body,h1,h2,h3,h4,h5,h6,p,div,span,a,strong,em,b,li,button,input,label,.htag
   <div class="buy-eyebrow">購買資訊</div>
   <h2 class="buy-title">想帶回家，這樣買</h2>
   <div class="buy-price">
-    <div class="pp"><span>天母面交</span><b>NT$550</b><em>8 片一組</em></div>
-    <div class="pp"><span>冷凍宅配</span><b>NT$700</b><em>8 片一組・含冷凍宅配運費</em></div>
+    <div class="ppr"><span class="m">天母面交</span><span class="v"><b>NT$550</b></span></div>
+    <div class="ppr"><span class="m">超商店到店</span><span class="v"><b>NT$700</b> <small>含運費</small></span></div>
+    <div class="ppr"><span class="m">黑貓冷凍宅配</span><span class="v"><b>NT$550</b> ＋運 <small>本島 160 元起（依件量）</small></span></div>
   </div>
-  <div class="buy-price-note">三款同價・每片 200g 厚切・8 片一組</div>
+  <div class="buy-price-note">三款同價・每片 200g 厚切・8 片一組｜黑貓運費依件量，詳情加 LINE</div>
   <div class="tstats">
     <div class="ts"><b>7</b><span>年在地口碑</span></div>
     <div class="ts"><b>1000+</b><span>片・一檔賣破</span></div>
@@ -1216,7 +1219,8 @@ html,body,h1,h2,h3,h4,h5,h6,p,div,span,a,strong,em,b,li,button,input,label,.htag
       <div class="buy-card-h">🚚 配送方式</div>
       <ul>
         <li>天母・石牌區：可約時間<b>面交</b>，<b>8 片 NT$550</b>（不預收款、面交再付款）</li>
-        <li>全台：<b>低溫 -18℃ 冷凍宅配</b>（黑貓冷凍宅配／超商店到店），<b>8 片 NT$700</b>（運費已含）</li>
+        <li>超商店到店：<b>低溫冷凍</b>，<b>8 片 NT$700</b>（含運費）</li>
+        <li>黑貓冷凍宅配：商品 <b>NT$550</b>／組 ＋運費（本島 <b>160 元</b>起，依件量計；離島另計）</li>
       </ul>
     </div>
     <div class="buy-card">
@@ -1278,7 +1282,7 @@ html,body,h1,h2,h3,h4,h5,h6,p,div,span,a,strong,em,b,li,button,input,label,.htag
     </div>
     <div class="faq-item">
       <div class="faq-q">Q. 怎麼付款？多久到貨？</div>
-      <div class="faq-a">天母面交採「面交再付款」；冷凍宅配走<b>黑貓冷凍宅配</b>，運費與付款方式加入官方 LINE 為妳安排。接單現做，約 1~2 週完成後配送。</div>
+      <div class="faq-a">天母面交採「面交再付款」；超商店到店 8 片 700 元（含運）；黑貓冷凍宅配為商品 550＋運費（本島 160 元起，依件量計）。運費與付款方式加入官方 LINE 為妳安排，接單現做約 1~2 週配送。</div>
     </div>
   </div>
 </section>
@@ -1394,7 +1398,7 @@ body{padding-bottom:74px;}
 .sticky-cta a{flex:0 0 auto;background:#06C755;color:#fff;font-weight:700;font-size:16px;padding:12px 22px;border-radius:999px;text-decoration:none;white-space:nowrap;}
 </style>
 <div class="sticky-cta">
-  <div class="p"><b>8 片 NT$550 起</b><span>面交550・宅配700（含運費）</span></div>
+  <div class="p"><b>8 片 NT$550 起</b><span>面交550・超商700・黑貓550+運</span></div>
   <a href="https://lin.ee/SiCQlxb" target="_blank" rel="noopener">📩 加 LINE 預購</a>
 </div>
 </body>
