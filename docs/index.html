@@ -222,6 +222,7 @@ body {
   display:flex; align-items:center; gap:12px;
 }
 .band-lbl::after { content:''; flex:1; height:1px; background:var(--amber-pl); max-width:48px; }
+.flavors-title-img { height:36px; width:auto; display:block; }
 
 .fg { display:grid; grid-template-columns:repeat(3,1fr); gap:14px; }
 @media(max-width:480px){ .fg { grid-template-columns:1fr; } }
@@ -1144,7 +1145,7 @@ html,body,h1,h2,h3,h4,h5,h6,p,div,span,a,strong,em,b,li,button,input,label,.htag
 
 <!-- ════ FLAVORS ════ -->
 <div class="flavor-band r">
-  <div class="band-lbl">今天想吃哪一種？</div>
+  <div class="band-lbl flavors-lbl"><img class="flavors-title-img" src="photos/flavors-title.png" alt="今天想吃哪一種？"></div>
   <div class="fg">
     <div class="fc">
       <div class="fc-i">其一 · 阿嬤的招牌</div>
