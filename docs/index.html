@@ -474,18 +474,24 @@ body {
   display: flex;
   flex-direction: column;
 }
+/* 文青紙膠帶（washi tape）：半透明色底＋細斜紋＋兩端羽化撕邊 */
 .review-card::before {
   content: '';
+  --tape: rgba(181,119,42,0.42);           /* 醬燒金 */
   position: absolute;
-  top: -11px; left: 50%;
-  width: 76px; height: 23px;
-  transform: translateX(-50%) rotate(-2.5deg);
-  background: rgba(216,186,138,0.5);
-  border-left: 1px dashed rgba(255,255,255,0.5);
-  border-right: 1px dashed rgba(255,255,255,0.5);
-  box-shadow: 0 1px 2px rgba(0,0,0,0.05);
+  top: -13px; left: 50%;
+  width: 88px; height: 27px;
+  transform: translateX(-50%) rotate(-3deg);
+  background:
+    repeating-linear-gradient(45deg, rgba(255,255,255,0.22) 0 2px, rgba(255,255,255,0) 2px 6px),
+    var(--tape);
+  box-shadow: 0 1px 3px rgba(90,58,26,0.12);
   z-index: 2;
+  -webkit-mask: linear-gradient(90deg, transparent 0, #000 7%, #000 93%, transparent 100%);
+          mask: linear-gradient(90deg, transparent 0, #000 7%, #000 93%, transparent 100%);
 }
+.review-card:nth-child(3n+2)::before { --tape: rgba(78,126,107,0.34); }   /* 青瓷綠 */
+.review-card:nth-child(3n)::before   { --tape: rgba(194,59,46,0.34); }    /* 淡甕仔紅 */
 .review-card:nth-child(odd)  { transform: rotate(-1.2deg); }
 .review-card:nth-child(even) { transform: rotate(1.1deg); margin-top: 6px; }
 .review-card:hover {
