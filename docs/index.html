@@ -818,22 +818,34 @@ body {
   font-weight: 600;
 }
 
+/* 最後兩段：行距減半、更好閱讀 */
+.bsf-block:last-of-type .bsf-lead { line-height: 1.5; }
+.bsf-block:last-of-type .bsf-body { line-height: 1.5; }
+
 .bsf-closing {
   font-family: 'LXGW WenKai TC','Noto Serif TC',serif;
-  font-size: clamp(14px,2.6vw,17px);
+  font-size: clamp(18px,3.4vw,21px);   /* 大兩級 */
+  font-weight: 700;                     /* 加粗 */
   color: var(--ink);
-  line-height: 1.9;
+  line-height: 1.55;                    /* 行距減半 */
   letter-spacing: 0.5px;
   text-align: center;
   padding: 24px 16px 6px;
   margin-top: 6px;
 }
+.bsf-closing strong, .bsf-closing b { font-weight: 700; }
 .bsf-closing::before {
   content: '';
   display: block;
   width: 32px; height: 1px;
   background: var(--amber);
   margin: 0 auto 26px;
+}
+.bsf-endlogo {
+  display: block;
+  width: 150px; max-width: 52%;
+  height: auto;
+  margin: 34px auto 0;
 }
 
 </style>
@@ -1113,12 +1125,14 @@ html,body,h1,h2,h3,h4,h5,h6,p,div,span,a,strong,em,b,li,button,input,label,.htag
 
   <div class="bsf-block">
     <div class="bsf-lead">七年來，有些事我們一直沒改。</div>
-    <div class="bsf-body">只用台灣溫體豬。當日屠宰，當日製作。<br>沒有食品代工廠必須要的化學添加、防腐劑、嫩肉精。<br>每一批肉都是小量進來，手工醃製、手工拍打，做完再一單一單交出去。<br>這雖然不是效率最高的做法，<em>這卻是我們覺得最接近原型食物的那一種。</em></div>
+    <div class="bsf-body">只用台灣溫體豬。當日屠宰，當日製作。<br>沒有食品代工廠必須要的化學添加、防腐劑、嫩肉精。<br>每一批肉都是小量進來，手工醃製、手工拍打，<br>做完再一單一單交出去。<br>這雖然不是效率最高的做法，<em>這卻是我們覺得最接近原型食物的那一種。</em></div>
   </div>
 
   <div class="bsf-closing">
-    畢竟，阿嬤從來不會給你吃有太多添加物的排骨。<br>她會把肉醃好，等你回家，現煎給你吃。<br><br>現在，我們做阿嬤做的那一半，用好料把肉醃透。<br>剩下的那一半，在你家的鍋裡完成。
+    畢竟，阿嬤從來不會給你吃<br>有太多添加物的排骨。<br>她會把肉醃好，等你回家，<br>現煎給你吃。<br><br>現在，我們做阿嬤做的那一半，<br>用好料把肉醃透。<br>剩下的那一半，在你家的鍋裡完成。
   </div>
+
+  <img class="bsf-endlogo" src="photos/logo-red.png" alt="阿嬤家之味">
 </section>
 
 <!-- ════ FLAVORS ════ -->
