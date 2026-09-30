@@ -752,89 +752,41 @@ body {
 ════════════════════ */
 .brand-story-full {
   background: var(--paper);
-  padding: 60px 28px 60px;
+  padding: 64px 32px 60px;
   border-bottom: 1px solid rgba(180,150,100,0.12);
-  text-align: left;
+  text-align: center;
 }
-@media(max-width:560px){ .brand-story-full { padding: 44px 16px 44px; } }
-
-/* magazine two-column grid */
-.bsf-grid {
-  display: grid;
-  grid-template-columns: minmax(0,1.55fr) minmax(0,1fr);
-  gap: 18px;
-  align-items: stretch;
-  max-width: 900px;
-  margin: 0 auto;
-}
-@media(max-width:560px){ .bsf-grid { grid-template-columns: minmax(0,1fr); gap: 14px; } }
-
-/* left: text card + hero photo */
-.bsf-textcol { position: relative; display: flex; flex-direction: column; min-width: 0; }
-.bsf-card {
-  background: var(--paper-w);
-  border-radius: 26px;
-  padding: 44px 40px 84px;
-  box-shadow: 0 10px 34px rgba(90,58,26,0.06);
-}
-@media(max-width:560px){ .bsf-card { padding: 30px 20px 64px; border-radius: 20px; } }
-
-.bsf-hero {
-  display: block;
-  width: 84%;
-  aspect-ratio: 5/6;
-  object-fit: cover;
-  border-radius: 20px;
-  margin: -64px auto 0;
-  box-shadow: 0 14px 40px rgba(90,58,26,0.18);
-  position: relative; z-index: 2;
-}
-@media(max-width:560px){ .bsf-hero { width: 92%; margin-top: -48px; aspect-ratio: 4/3; } }
-
-/* right: stacked photos fill column height */
-.bsf-photocol {
-  display: flex; flex-direction: column; gap: 16px; min-width: 0;
-}
-.bsf-photocol img {
-  flex: 1 1 0; min-height: 0; width: 100%;
-  object-fit: cover;
-  border-radius: 20px;
-  box-shadow: 0 8px 24px rgba(90,58,26,0.1);
-}
-@media(max-width:560px){
-  .bsf-photocol { flex-direction: row; gap: 10px; }
-  .bsf-photocol img { min-width: 0; aspect-ratio: 1/1; border-radius: 16px; }
-}
+@media(max-width:600px){ .brand-story-full { padding: 48px 20px 48px; } }
 
 .bsf-eyebrow {
   font-family:'LXGW WenKai TC','Noto Serif TC',serif; font-weight:700;
-  font-size: 21px; letter-spacing: 3px; color: var(--ink);
-  margin-bottom: 26px;
-  display: flex; align-items: center; justify-content: flex-start; gap: 10px;
+  font-size: 20px; letter-spacing: 3px; color: var(--ink);
+  margin-bottom: 36px;
+  display: flex; align-items: center; justify-content: center; gap: 12px;
 }
 .bsf-eyebrow::after { content:none; }
 
 .bsf-block {
-  margin-bottom: 22px;
-  padding-bottom: 22px;
-  border-bottom: 1px solid rgba(180,150,100,0.12);
+  margin-bottom: 36px;
+  padding-bottom: 36px;
+  border-bottom: 1px solid rgba(180,150,100,0.1);
 }
 .bsf-block:last-child { border-bottom: none; margin-bottom: 0; padding-bottom: 0; }
 
 .bsf-lead {
   font-family: 'LXGW WenKai TC','Noto Serif TC',serif;
-  font-size: clamp(15px,2.5vw,18px);
+  font-size: clamp(16px,3vw,20px);
   color: var(--ink);
-  line-height: 1.95;
+  line-height: 2.1;
   letter-spacing: 0.5px;
-  margin-bottom: 12px;
+  margin-bottom: 20px;
 }
 
 .bsf-body {
   font-family: 'LXGW WenKai TC','Noto Serif TC',serif;
-  font-size: clamp(13px,2.2vw,14.5px);
+  font-size: clamp(13.5px,2.3vw,15px);
   color: var(--ink-mid);
-  line-height: 2.15;
+  line-height: 2.4;
   letter-spacing: 0.4px;
 }
 .bsf-body strong {
@@ -849,30 +801,21 @@ body {
 
 .bsf-closing {
   font-family: 'LXGW WenKai TC','Noto Serif TC',serif;
-  font-size: clamp(13.5px,2.4vw,15.5px);
+  font-size: clamp(14px,2.6vw,17px);
   color: var(--ink);
-  line-height: 2.05;
+  line-height: 2.2;
   letter-spacing: 0.5px;
-  margin-top: 22px;
-  padding-top: 22px;
-  border-top: 1px solid rgba(180,150,100,0.12);
+  text-align: center;
+  padding: 34px 16px 6px;
+  margin-top: 8px;
 }
-
-.bsf-cta {
-  display: inline-flex; align-items: center; gap: 8px;
-  margin-top: 26px;
-  background: #fff;
-  color: var(--seal);
-  font-family: 'LXGW WenKai TC','Noto Serif TC',serif; font-weight: 700;
-  font-size: 14px; letter-spacing: 2px;
-  padding: 13px 28px;
-  border-radius: 999px;
-  text-decoration: none;
-  box-shadow: 0 6px 18px rgba(90,58,26,0.12);
-  transition: transform 0.18s ease, box-shadow 0.18s ease;
+.bsf-closing::before {
+  content: '';
+  display: block;
+  width: 32px; height: 1px;
+  background: var(--amber);
+  margin: 0 auto 26px;
 }
-.bsf-cta:hover { transform: translateY(-2px); box-shadow: 0 9px 24px rgba(90,58,26,0.18); }
-.bsf-cta::after { content: '→'; font-size: 15px; }
 
 </style>
 <style id="taipei-font">
@@ -1141,54 +1084,34 @@ html,body,h1,h2,h3,h4,h5,h6,p,div,span,a,strong,em,b,li,button,input,label,.htag
 
 
 <section class="brand-story-full r">
-  <div class="bsf-grid">
+  <div class="bsf-eyebrow"><img class="story-logo" src="photos/logo-red.png" alt="阿嬤家之味">的故事</div>
 
-    <!-- 左：文字卡 + 主視覺 -->
-    <div class="bsf-textcol">
-      <div class="bsf-card">
-        <div class="bsf-eyebrow"><img class="story-logo" src="photos/logo-red.png" alt="阿嬤家之味">的故事</div>
+  <div class="bsf-block">
+    <div class="bsf-lead">「阿嬤家之味」<br>一開始不叫這個名字。</div>
+    <div class="bsf-body">它是「社區裡一位退休阿嬤<br>做的手工排骨」。<br>在天母的媽媽社群裡，<br>一個傳一個傳出來的。</div>
+  </div>
 
-        <div class="bsf-block">
-          <div class="bsf-lead">「阿嬤家之味」一開始不叫這個名字。</div>
-          <div class="bsf-body">它是「社區裡一位退休阿嬤做的手工排骨」。在天母的媽媽社群裡，一個傳一個傳出來的。</div>
-        </div>
+  <div class="bsf-block">
+    <div class="bsf-lead">七年多前，<br>第一次開團。</div>
+    <div class="bsf-body">原本只是想和大家<br>分享自家人喜歡的這個味道。<br>沒想到，過年一檔，<br>賣掉<strong>超過一千片</strong>。<br>沒有宣傳，<br>只有一群媽媽在替另一個媽媽背書。</div>
+  </div>
 
-        <div class="bsf-block">
-          <div class="bsf-lead">七年多前，第一次開團。</div>
-          <div class="bsf-body">原本只是想和大家分享自家人喜歡的這個味道。沒想到，過年一檔，賣掉<strong>超過一千片</strong>。沒有宣傳，只有一群媽媽在替另一個媽媽背書。</div>
-        </div>
+  <div class="bsf-block">
+    <div class="bsf-body">後來有媽媽跟我們說，<br>黑胡椒太重，小孩不敢吃。<br>阿嬤就把配方拆開重調，<br>做出減量的<strong>「幼幼淡味排骨」</strong>，<br>還有完全不加黑胡椒的<strong>「特製排骨」</strong>。<br>兩種新口味，<br>都是客人問出來的。</div>
+  </div>
 
-        <div class="bsf-block">
-          <div class="bsf-body">後來有媽媽跟我們說，黑胡椒太重，小孩不敢吃。阿嬤就把配方拆開重調，做出減量的<strong>「幼幼淡味排骨」</strong>，還有完全不加黑胡椒的<strong>「特製排骨」</strong>。兩種新口味，都是客人問出來的。</div>
-        </div>
+  <div class="bsf-block">
+    <div class="bsf-lead">七年來，<br>有些事我們一直沒改。</div>
+    <div class="bsf-body">只用台灣溫體豬。<br>當日屠宰，當日製作。<br>沒有食品代工廠必須要的<br>化學添加、防腐劑、嫩肉精。<br>每一批肉都是小量進來，<br>手工醃製、手工拍打，<br>做完再一單一單交出去。<br>這雖然不是效率最高的做法，<br><em>這卻是我們覺得<br>最接近原型食物的那一種。</em></div>
+  </div>
 
-        <div class="bsf-block">
-          <div class="bsf-lead">七年來，有些事我們一直沒改。</div>
-          <div class="bsf-body">只用台灣溫體豬。當日屠宰，當日製作。沒有食品代工廠必須要的化學添加、防腐劑、嫩肉精。每一批肉都是小量進來，手工醃製、手工拍打，做完再一單一單交出去。這雖然不是效率最高的做法，<em>這卻是我們覺得最接近原型食物的那一種。</em></div>
-        </div>
-
-        <div class="bsf-closing">
-          畢竟，阿嬤從來不會給你吃有太多添加物的排骨。她會把肉醃好，等你回家，現煎給你吃。現在，我們做阿嬤做的那一半，用好料把肉醃透。剩下的那一半，在你家的鍋裡完成。
-        </div>
-
-        <a class="bsf-cta" href="#flavors">看看三款口味</a>
-      </div>
-
-      <img class="bsf-hero" src="photos/c3.jpg" loading="lazy" alt="金黃酥脆的厚切排骨">
-    </div>
-
-    <!-- 右：直排三張照片 -->
-    <div class="bsf-photocol">
-      <img src="photos/c10.jpg" loading="lazy" alt="夾起一片剛炸好的厚切排骨">
-      <img src="photos/c7.jpg" loading="lazy" alt="氣炸鍋現炸排骨">
-      <img src="photos/c8.jpg" loading="lazy" alt="煎排骨擺盤上桌">
-    </div>
-
+  <div class="bsf-closing">
+    畢竟，<br>阿嬤從來不會給你吃<br>有太多添加物的排骨。<br>她會把肉醃好，<br>等你回家，現煎給你吃。<br><br>現在，我們做阿嬤做的那一半，<br>用好料把肉醃透。<br>剩下的那一半，<br>在你家的鍋裡完成。
   </div>
 </section>
 
 <!-- ════ FLAVORS ════ -->
-<div class="flavor-band r" id="flavors">
+<div class="flavor-band r">
   <div class="band-lbl">今天想吃哪一種？</div>
   <div class="fg">
     <div class="fc">
