@@ -774,7 +774,8 @@ body {
    BRAND STORY FULL
 ════════════════════ */
 .brand-story-full {
-  background: var(--paper);
+  background-color: var(--paper);
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='150' height='150'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.85' numOctaves='2' stitchTiles='stitch'/%3E%3CfeColorMatrix type='saturate' values='0'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)' opacity='0.05'/%3E%3C/svg%3E");
   padding: 60px 46px 60px;
   border-bottom: 1px solid rgba(180,150,100,0.12);
   text-align: center;
@@ -798,6 +799,11 @@ body {
 }
 /* 內容置於框線之上 */
 .brand-story-full > *{ position:relative; z-index:1; }
+/* 上下框線中央小菱形 */
+.bsf-dia{ position:absolute; left:50%; width:10px; height:10px; background:rgba(123,90,56,.72); transform:translate(-50%,-50%) rotate(45deg); z-index:2; box-shadow:0 0 0 5px var(--paper); pointer-events:none; }
+.bsf-dia-top{ top:18px; }
+.bsf-dia-bot{ bottom:18px; transform:translate(-50%,50%) rotate(45deg); }
+@media(max-width:600px){ .bsf-dia-top{ top:12px; } .bsf-dia-bot{ bottom:12px; } }
 
 .bsf-eyebrow {
   font-family:'LXGW WenKai TC','Noto Serif TC',serif; font-weight:700;
@@ -1150,6 +1156,8 @@ html,body,h1,h2,h3,h4,h5,h6,p,div,span,a,strong,em,b,li,button,input,label,.htag
 
 
 <section class="brand-story-full r">
+  <span class="bsf-dia bsf-dia-top"></span>
+  <span class="bsf-dia bsf-dia-bot"></span>
   <div class="bsf-eyebrow"><img class="story-logo" src="photos/logo-red.png" alt="阿嬤家之味"><span class="bsf-of">的故事</span></div>
 
   <div class="bsf-block">
