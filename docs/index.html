@@ -1407,42 +1407,46 @@ html,body,h1,h2,h3,h4,h5,h6,p,div,span,a,strong,em,b,li,button,input,label,.htag
 .faq-title-h{line-height:0;}
 .faq-title-img{width:min(320px,80%);height:auto;display:block;margin:0 auto;}
 .faq-list{max-width:480px;margin:0 auto;display:flex;flex-direction:column;gap:12px;}
-.faq-item{background:var(--paper);border:1px solid rgba(179,64,42,0.10);border-radius:12px;padding:16px 18px;}
-.faq-q{font-weight:700;color:var(--seal);font-size:15px;margin-bottom:7px;}
-.faq-a{color:var(--ink-mid);font-size:14px;line-height:1.9;}
+.faq-item{background:var(--paper);border:1px solid rgba(179,64,42,0.10);border-radius:12px;overflow:hidden;transition:box-shadow .2s ease,border-color .2s ease;}
+.faq-item[open]{box-shadow:0 4px 16px rgba(58,42,32,.07);border-color:rgba(179,64,42,0.22);}
+.faq-q{font-weight:700;color:var(--seal);font-size:15px;padding:15px 18px;cursor:pointer;list-style:none;display:flex;align-items:center;justify-content:space-between;gap:12px;-webkit-tap-highlight-color:transparent;}
+.faq-q::-webkit-details-marker{display:none;}
+.faq-q::after{content:"";flex:0 0 auto;width:9px;height:9px;border-right:2px solid var(--seal);border-bottom:2px solid var(--seal);transform:rotate(45deg) translateY(-2px);transition:transform .25s ease;opacity:.75;}
+.faq-item[open] .faq-q::after{transform:rotate(-135deg) translateY(-2px);}
+.faq-a{color:var(--ink-mid);font-size:14px;line-height:1.9;padding:0 18px 16px;}
 </style>
 <section class="faq-section r">
   <div class="buy-eyebrow">常見問題</div>
   <h2 class="buy-title faq-title-h"><img class="faq-title-img" src="photos/faq-title.png" alt="人客最常問的問題都在這"></h2>
   <div class="faq-list">
-    <div class="faq-item">
-      <div class="faq-q">Q. 幾歲的寶寶能吃？</div>
+    <details class="faq-item" open>
+      <summary class="faq-q">Q. 幾歲的寶寶能吃？</summary>
       <div class="faq-a">約 1~2 歲、開始嘗試吃肉的寶寶都可以試試。建議從「特製」（0 黑胡椒）開始，可搭配洋蔥切絲等蔬菜一起蒸熟。</div>
-    </div>
-    <div class="faq-item">
-      <div class="faq-q">Q. 有哪些料理方式？</div>
+    </details>
+    <details class="faq-item">
+      <summary class="faq-q">Q. 有哪些料理方式？</summary>
       <div class="faq-a">退冰放軟後，用白開水輕拍肉表面，讓醃粉更均勻，接著中小火煎至金黃即可食用；也可再拍一層炸粉在表面半煎炸，或用電鍋蒸熟（味道類似粉蒸排骨）。</div>
-    </div>
-    <div class="faq-item">
-      <div class="faq-q">Q. 可以微波加熱嗎？</div>
+    </details>
+    <details class="faq-item">
+      <summary class="faq-q">Q. 可以微波加熱嗎？</summary>
       <div class="faq-a">可以，但外皮容易變軟。想要外酥內多汁，建議用氣炸或乾煎最好吃。</div>
-    </div>
-    <div class="faq-item">
-      <div class="faq-q">Q. 沒有氣炸鍋也能做嗎？</div>
+    </details>
+    <details class="faq-item">
+      <summary class="faq-q">Q. 沒有氣炸鍋也能做嗎？</summary>
       <div class="faq-a">可以！退冰後用一點白開水把粉抹勻，中小火煎至兩面金黃就很香！煎之前也可以再裹上一點麵包粉或酥炸粉；你也可以用電鍋蒸熟（味道類似粉蒸排骨）。也有媽媽把排骨切絲當成炒菜配料，椒類、菇類、洋蔥都非常搭！</div>
-    </div>
-    <div class="faq-item">
-      <div class="faq-q">Q. 一次要買多少？能放多久？</div>
+    </details>
+    <details class="faq-item">
+      <summary class="faq-q">Q. 一次要買多少？能放多久？</summary>
       <div class="faq-a">冷凍 -18℃ 可保存 6 個月，很適合一次囤 2~3 組當常備，臨時要開飯氣炸 15 分鐘就上桌。</div>
-    </div>
-    <div class="faq-item">
-      <div class="faq-q">Q. 怎麼付款？多久到貨？</div>
+    </details>
+    <details class="faq-item">
+      <summary class="faq-q">Q. 怎麼付款？多久到貨？</summary>
       <div class="faq-a">天母自取採「自取再付款」；超商店到店 8 片 700 元（含運）；黑貓冷凍宅配為商品 550＋運費（本島 160 元起，依件量計）。運費與付款方式加入官方 LINE 為妳安排，接單現做約 1~2 週配送。</div>
-    </div>
-    <div class="faq-item">
-      <div class="faq-q">Q. 可以退換貨嗎？</div>
+    </details>
+    <details class="faq-item">
+      <summary class="faq-q">Q. 可以退換貨嗎？</summary>
       <div class="faq-a">本商品為冷凍生鮮食品，依規定<b>不適用消保法 7 天鑑賞期</b>。請於收到時立即開箱檢查（建議全程錄影），如有退冰、破損或品項不符，請於 <b>24 小時內</b>聯繫客服，我們會為妳處理。</div>
-    </div>
+    </details>
   </div>
 </section>
 
