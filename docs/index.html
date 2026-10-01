@@ -227,30 +227,26 @@ body {
 .trust-ico { height:25px; width:auto; display:block; flex:0 0 auto; }
 .trust-title-img { height:34px; width:auto; display:block; }
 
-.fg { display:grid; grid-template-columns:repeat(3,1fr); gap:14px; }
-@media(max-width:480px){ .fg { grid-template-columns:1fr; } }
-
-.fc {
-  background:#fffdf6; padding:18px 16px 16px;
-  border:1.5px dashed rgba(176,84,24,0.4);
-  border-radius:4px;
-  position:relative;
-  transition:transform 0.25s, box-shadow 0.25s;
-}
-.fc:hover { transform:translateY(-3px); box-shadow:0 10px 26px rgba(90,58,26,0.09); }
-.fc-i { font-family:'LXGW WenKai TC',serif; font-size:13px; letter-spacing:2px; color:var(--seal); margin-bottom:7px; font-weight:700; }
-.fc-n {
-  font-family:'LXGW WenKai TC','Noto Serif TC',serif; font-weight:700;
-  font-size:16px; color:var(--ink); letter-spacing:1px; margin-bottom:2px;
-}
-.fc-s { font-size:10px; color:var(--ink-soft); letter-spacing:1px; margin-bottom:9px; }
-.fc-r { height:1px; background:rgba(180,150,100,0.2); margin-bottom:9px; }
-.fc-b { font-size:11px; color:var(--ink-mid); line-height:2; }
-.fc-t {
-  display:inline-block; margin-top:9px;
-  border:1px solid rgba(180,150,100,0.3);
-  padding:2px 8px; font-size:9.5px; color:var(--ink-soft); letter-spacing:1px;
-}
+/* 三欄暖色塊口味（參考日式湯品三連色版） */
+.flavor-panels{display:grid;grid-template-columns:repeat(3,1fr);gap:0;max-width:600px;margin:0 auto;
+  border-radius:16px;overflow:hidden;box-shadow:0 12px 32px rgba(90,58,26,.14);}
+@media(max-width:560px){.flavor-panels{grid-template-columns:1fr;}}
+.fp{position:relative;padding:46px 16px 24px;display:flex;flex-direction:column;align-items:center;
+  text-align:center;gap:9px;}
+.fp-1{background:#6F5C43;color:#F2E8D6;}   /* 原味 · 檜木棕 */
+.fp-2{background:#D89F3E;color:#43300F;}   /* 幼幼 · 醬燒金 */
+.fp-3{background:#C56231;color:#FBEEE1;}   /* 特製 · 暖橘 */
+.fp-label{position:absolute;top:16px;left:15px;writing-mode:vertical-rl;text-orientation:upright;
+  font-weight:700;font-size:15px;letter-spacing:4px;opacity:.92;}
+.fp-no{position:absolute;top:16px;right:15px;font-size:12px;letter-spacing:1px;opacity:.6;}
+.fp-imgwrap{width:min(140px,62%);aspect-ratio:1;border-radius:50%;overflow:hidden;
+  border:3px solid rgba(255,255,255,.28);box-shadow:0 7px 20px rgba(0,0,0,.20);margin-top:4px;}
+.fp-imgwrap img{width:100%;height:100%;object-fit:cover;display:block;}
+.fp-name{font-weight:700;font-size:16px;letter-spacing:1px;margin-top:6px;}
+.fp-sub{font-size:11px;letter-spacing:1px;opacity:.8;}
+.fp-desc{font-size:11.5px;line-height:1.85;opacity:.9;max-width:210px;margin:3px auto 0;}
+.fp-tag{display:inline-block;margin-top:7px;border:1px solid currentColor;opacity:.85;
+  padding:3px 12px;font-size:10px;letter-spacing:1px;border-radius:999px;}
 
 /* ════════════════════
    TRUST
@@ -1194,30 +1190,30 @@ html,body,h1,h2,h3,h4,h5,h6,p,div,span,a,strong,em,b,li,button,input,label,.htag
 <!-- ════ FLAVORS ════ -->
 <div class="flavor-band r">
   <div class="band-lbl flavors-lbl"><img class="flavors-title-img" src="photos/flavors-title.png" alt="今天想吃哪一種？"></div>
-  <div class="fg">
-    <div class="fc">
-      <div class="fc-i">其一 · 阿嬤的招牌</div>
-      <div class="fc-n">手路 原味排骨</div>
-      <div class="fc-s">原味 · 經典款</div>
-      <div class="fc-r"></div>
-      <div class="fc-b">醬油、糖、黑胡椒與有機紅麴完美平衡。香氣濃郁，氣炸後表皮微焦，肉汁鎖住。</div>
-      <span class="fc-t">適合全家大小</span>
+  <div class="flavor-panels">
+    <div class="fp fp-1">
+      <span class="fp-label">原味</span><span class="fp-no">01</span>
+      <div class="fp-imgwrap"><img src="photos/c3.jpg" loading="lazy" alt="原味黑胡椒厚切排骨"></div>
+      <div class="fp-name">手路 原味排骨</div>
+      <div class="fp-sub">黑胡椒經典款</div>
+      <p class="fp-desc">醬油、糖、黑胡椒與有機紅麴完美平衡，香氣濃郁。</p>
+      <span class="fp-tag">全家大小</span>
     </div>
-    <div class="fc">
-      <div class="fc-i">其二 · 囝仔上愛</div>
-      <div class="fc-n">淡味 幼幼排骨</div>
-      <div class="fc-s">少鹹 · 兒童首選</div>
-      <div class="fc-r"></div>
-      <div class="fc-b">因為媽媽說孩子不敢吃黑胡椒，阿嬤特別調整。口味清甜，一口接一口。</div>
-      <span class="fc-t">為孩子特別開發</span>
+    <div class="fp fp-2">
+      <span class="fp-label">幼幼</span><span class="fp-no">02</span>
+      <div class="fp-imgwrap"><img src="photos/c4.jpg" loading="lazy" alt="幼幼少黑胡椒排骨"></div>
+      <div class="fp-name">淡味 幼幼排骨</div>
+      <div class="fp-sub">黑胡椒減量・兒童首選</div>
+      <p class="fp-desc">孩子不敢吃黑胡椒，阿嬤特別調淡，口味清甜。</p>
+      <span class="fp-tag">為孩子開發</span>
     </div>
-    <div class="fc">
-      <div class="fc-i">其三 · 囝仔也安心</div>
-      <div class="fc-n">特製 零黑胡椒排骨</div>
-      <div class="fc-s">無黑胡椒 · 給怕辣口的小小孩</div>
-      <div class="fc-r"></div>
-      <div class="fc-b">完全不加黑胡椒，保留醬油與紅麴自然鮮甜，怕辣的小小孩也能一口接一口。</div>
-      <span class="fc-t">小小孩首選</span>
+    <div class="fp fp-3">
+      <span class="fp-label">特製</span><span class="fp-no">03</span>
+      <div class="fp-imgwrap"><img src="photos/c9.jpg" loading="lazy" alt="特製零黑胡椒排骨"></div>
+      <div class="fp-name">特製 零黑胡椒</div>
+      <div class="fp-sub">完全無黑胡椒</div>
+      <p class="fp-desc">保留醬油與紅麴自然鮮甜，怕辣的小小孩也能吃。</p>
+      <span class="fp-tag">小小孩首選</span>
     </div>
   </div>
 </div>
