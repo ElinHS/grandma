@@ -788,15 +788,14 @@ body {
 /* 品牌故事內文：乾淨細黑體，直接壓在牆上、無白框 */
 .brand-story-full .bsf-lead,
 .brand-story-full .bsf-body,
-.brand-story-full .bsf-closing{
-  font-family:'Noto Sans TC','PingFang TC','Microsoft JhengHei',sans-serif !important;
-  color:#2A2119; text-shadow:none;
-}
-.brand-story-full .bsf-lead{ font-weight:400 !important; }
-.brand-story-full .bsf-body{ font-weight:300 !important; }
-.brand-story-full .bsf-closing{ font-weight:400 !important; }
-.brand-story-full .bsf-body strong{ font-weight:500 !important; color:#1E1711; }
-.brand-story-full .bsf-body em{ font-weight:400 !important; color:#8A5A2A; font-style:normal; }
+.brand-story-full .bsf-closing{ color:#2A2119; text-shadow:none; }
+.brand-story-full .bsf-lead{ font-family:'Noto Serif TC','Songti TC',serif !important; font-weight:500 !important; }
+.brand-story-full .bsf-body{ font-family:'Noto Sans TC','PingFang TC','Microsoft JhengHei',sans-serif !important; font-weight:400 !important; }
+.brand-story-full .bsf-closing{ font-family:'Noto Serif TC','Songti TC',serif !important; font-weight:500 !important; }
+.brand-story-full .bsf-body strong{ font-family:'Noto Sans TC','PingFang TC',sans-serif !important; font-weight:500 !important; color:#1E1711; }
+.brand-story-full .bsf-body em{ font-weight:500 !important; color:#8A5A2A; font-style:normal; }
+/* DEMO-ALIGN toggle */
+.brand-story-full .bsf-body{ text-align:left; }
 /* 儀式感雙細框線＋框內宣紙白內頁（裱框感） */
 .brand-story-full::before{
   content:''; position:absolute; inset:18px;
@@ -831,37 +830,41 @@ body {
   display: flex; flex-direction: column; align-items: center; gap: 12px;
 }
 .bsf-eyebrow::after { content:none; }
+.bsf-eyebrow::before { content:none !important; display:none !important; }
 .bsf-eyebrow .story-logo { height: 34px; width: auto; display: block; }
 .bsf-of {
-  font-family:'LXGW WenKai TC','Noto Serif TC',serif; font-weight:400;
-  font-size: 13px; letter-spacing: 3px; text-indent: 0;
+  font-family:'Noto Serif TC','Songti TC',serif; font-weight:500;
+  font-size: 15px; letter-spacing: 4px; text-indent: 0;
   color: #C23B2E;
   display: flex; align-items: center; gap: 14px;
 }
-.bsf-of::before, .bsf-of::after { content:''; display:block; width:26px; height:1px; background:rgba(194,59,46,.38); }
+/* ABOUTUS-DECO: 手寫 About Us 圖 */
+.bsf-of::before, .bsf-of::after { content:''; display:block; width:34px; height:1.5px; background:rgba(194,59,46,.5); }
+.bsf-of-img{ display:block; margin:0 auto; width:230px; max-width:64%; height:auto; }
 
 .bsf-block {
-  margin-bottom: 14px;
-  padding-bottom: 14px;
+  max-width: 480px;
+  margin: 0 auto 24px;
+  padding-bottom: 22px;
   border-bottom: 1px solid rgba(180,150,100,0.1);
 }
 .bsf-block:last-child { border-bottom: none; margin-bottom: 0; padding-bottom: 0; }
 
 .bsf-lead {
   font-family: 'LXGW WenKai TC','Noto Serif TC',serif;
-  font-size: clamp(16px,3vw,20px);
+  font-size: clamp(17px,3.2vw,20px);
   color: var(--ink);
-  line-height: 1.5;
+  line-height: 1.6;
   letter-spacing: 0.5px;
-  margin-bottom: 6px;
+  margin-bottom: 10px;
 }
 
 .bsf-body {
   font-family: 'LXGW WenKai TC','Noto Serif TC',serif;
-  font-size: clamp(13.5px,2.3vw,15px);
+  font-size: clamp(14px,2.5vw,15.5px);
   color: var(--ink-mid);
-  line-height: 1.55;
-  letter-spacing: 0.4px;
+  line-height: 1.85;
+  letter-spacing: 0.3px;
 }
 .bsf-body strong {
   font-family: 'LXGW WenKai TC','Noto Serif TC',serif;
@@ -873,20 +876,20 @@ body {
   font-weight: 600;
 }
 
-/* 最後兩段：行距再收緊 */
-.bsf-block:last-of-type .bsf-lead { line-height: 1.45; }
-.bsf-block:last-of-type .bsf-body { line-height: 1.5; }
+.bsf-block:last-of-type .bsf-lead { line-height: 1.6; }
+.bsf-block:last-of-type .bsf-body { line-height: 1.85; }
 
 .bsf-closing {
   font-family: 'LXGW WenKai TC','Noto Serif TC',serif;
-  font-size: clamp(18px,3.4vw,21px);   /* 大兩級 */
-  font-weight: 700;                     /* 加粗 */
+  font-size: clamp(14.5px,2.6vw,16.5px);  /* 依指示縮小 2 級 */
+  font-weight: 500;
   color: var(--ink);
-  line-height: 1.45;                    /* 行距再收緊 */
+  line-height: 1.8;
   letter-spacing: 0.5px;
   text-align: center;
-  padding: 20px 16px 6px;
-  margin-top: 6px;
+  max-width: 480px;
+  padding: 22px 16px 6px;
+  margin: 8px auto 0;
 }
 .bsf-closing strong, .bsf-closing b { font-weight: 700; }
 .bsf-closing::before {
@@ -1186,7 +1189,7 @@ html,body,h1,h2,h3,h4,h5,h6,p,div,span,a,strong,em,b,li,button,input,label,.htag
 <section class="brand-story-full r">
   <span class="bsf-dia bsf-dia-top"></span>
   <span class="bsf-dia bsf-dia-bot"></span>
-  <div class="bsf-eyebrow"><img class="story-logo" src="photos/logo-red.png" alt="阿嬤家之味"><span class="bsf-of">About Us</span></div>
+  <div class="bsf-eyebrow"><img class="bsf-of-img" src="photos/story-about1.png" alt="About Us"></div>
 
   <div class="bsf-block">
     <div class="bsf-lead">「阿嬤家之味」一開始不叫這個名字。</div>
@@ -1199,12 +1202,12 @@ html,body,h1,h2,h3,h4,h5,h6,p,div,span,a,strong,em,b,li,button,input,label,.htag
   </div>
 
   <div class="bsf-block">
-    <div class="bsf-body">後來有媽媽跟我們說，黑胡椒太重，小孩不敢吃。<br>阿嬤就把配方拆開重調，<br>做出減量的<strong>「幼幼淡味排骨」</strong>，<br>還有完全不加黑胡椒的<strong>「特製排骨」</strong>。<br>兩種新口味，都是客人問出來的。</div>
+    <div class="bsf-body">後來有媽媽跟我們說，黑胡椒太重，小孩不敢吃。<br>阿嬤就把配方拆開重調，做出減量的<strong>「幼幼淡味排骨」</strong>，還有完全不加黑胡椒的<strong>「特製排骨」</strong>。<br>兩種新口味，都是客人問出來的。</div>
   </div>
 
   <div class="bsf-block">
     <div class="bsf-lead">七年來，有些事我們一直沒改。</div>
-    <div class="bsf-body">只用台灣溫體豬。當日屠宰，當日製作。<br>沒有食品代工廠必須要的化學添加、防腐劑、嫩肉精。<br><br>每一批肉都是小量進來，手工醃製、手工拍打，<br>做完再一單一單交出去。<br>這雖然不是效率最高的做法，<br><em>這卻是我們覺得最接近原型食物的那一種。</em></div>
+    <div class="bsf-body">只用台灣溫體豬。當日屠宰，當日製作。<br>沒有食品代工廠必須要的化學添加、防腐劑、嫩肉精。<br><br>每一批肉都是小量進來，手工醃製、手工拍打，做完再一單一單交出去。<br>這雖然不是效率最高的做法，<br><em>這卻是我們覺得最接近原型食物的那一種。</em></div>
   </div>
 
   <div class="bsf-closing">
