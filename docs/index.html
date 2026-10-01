@@ -931,9 +931,16 @@ html,body,h1,h2,h3,h4,h5,h6,p,div,span,a,strong,em,b,li,button,input,label,.htag
 <style>
 .ugc-section{background:var(--paper-d);padding:48px 22px;}
 .ugc-intro{max-width:460px;margin:0 auto 24px;text-align:center;color:var(--ink-soft);font-size:14px;line-height:1.9;}
-.ugc-grid{max-width:520px;margin:0 auto;column-count:2;column-gap:8px;}
-.ugc-item{break-inside:avoid;margin:0 0 8px;}
-.ugc-imgwrap{position:relative;border-radius:13px;overflow:hidden;line-height:0;box-shadow:0 2px 10px rgba(58,42,32,.10);}
+.ugc-grid{max-width:530px;margin:0 auto;column-count:2;column-gap:16px;padding:6px 6px 0;}
+.ugc-item{break-inside:avoid;margin:0 0 18px;transition:transform .28s ease, box-shadow .28s ease;}
+/* 浮動交錯：輕微旋轉＋高低錯落 */
+.ugc-item:nth-child(4n+1){transform:rotate(-2deg);}
+.ugc-item:nth-child(4n+2){transform:rotate(1.6deg);margin-top:20px;}
+.ugc-item:nth-child(4n+3){transform:rotate(1.1deg);}
+.ugc-item:nth-child(4n){transform:rotate(-1.5deg);margin-top:14px;}
+.ugc-item:hover{transform:rotate(0) translateY(-5px);}
+.ugc-imgwrap{position:relative;border-radius:13px;overflow:hidden;line-height:0;box-shadow:0 10px 26px rgba(58,42,32,.22), 0 2px 6px rgba(58,42,32,.12);}
+.ugc-item:hover .ugc-imgwrap{box-shadow:0 16px 34px rgba(58,42,32,.28);}
 .ugc-imgwrap img{width:100%;max-width:100%;height:auto;display:block;}
 .ugc-badge{position:absolute;left:8px;bottom:8px;background:rgba(30,18,8,.72);color:#fff;font-size:11px;letter-spacing:1px;padding:4px 10px;border-radius:999px;}
 .ugc-item figcaption{font-size:12px;color:var(--ink-mid);text-align:center;margin:6px 0 2px;line-height:1.45;padding:0 4px;}
