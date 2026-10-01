@@ -965,14 +965,16 @@ html,body,h1,h2,h3,h4,h5,h6,p,div,span,a,strong,em,b,li,button,input,label,.htag
 <style>
 .ugc-section{background:var(--paper-d);padding:48px 22px;}
 .ugc-intro{max-width:460px;margin:0 auto 24px;text-align:center;color:var(--ink-soft);font-size:14px;line-height:1.9;}
-.ugc-grid{max-width:530px;margin:0 auto;column-count:2;column-gap:16px;padding:6px 6px 0;}
-.ugc-item{break-inside:avoid;margin:0 0 18px;transition:transform .28s ease, box-shadow .28s ease;}
-/* 浮動交錯：輕微旋轉＋高低錯落 */
-.ugc-item:nth-child(4n+1){transform:rotate(-2deg);}
-.ugc-item:nth-child(4n+2){transform:rotate(1.6deg);margin-top:20px;}
-.ugc-item:nth-child(4n+3){transform:rotate(1.1deg);}
-.ugc-item:nth-child(4n){transform:rotate(-1.5deg);margin-top:14px;}
-.ugc-item:hover{transform:rotate(0) translateY(-5px);}
+.ugc-grid{max-width:520px;margin:0 auto;column-count:2;column-gap:0;padding:12px 2px 0;}
+.ugc-item{break-inside:avoid;margin:0 0 6px;position:relative;transition:transform .28s ease, box-shadow .28s ease;}
+/* 浮動交疊：旋轉＋高低錯落＋z 分層，照片在接縫處交疊 */
+.ugc-item:nth-child(6n+1){transform:rotate(-4deg);z-index:2;}
+.ugc-item:nth-child(6n+2){transform:rotate(3deg);margin-top:18px;z-index:5;}
+.ugc-item:nth-child(6n+3){transform:rotate(1.8deg);margin-top:-8px;z-index:3;}
+.ugc-item:nth-child(6n+4){transform:rotate(-3deg);margin-top:12px;z-index:6;}
+.ugc-item:nth-child(6n+5){transform:rotate(3.6deg);margin-top:-6px;z-index:4;}
+.ugc-item:nth-child(6n){transform:rotate(-2deg);margin-top:16px;z-index:7;}
+.ugc-item:hover{transform:rotate(0) scale(1.05);z-index:20;}
 .ugc-imgwrap{position:relative;border-radius:13px;overflow:hidden;line-height:0;box-shadow:0 10px 26px rgba(58,42,32,.22), 0 2px 6px rgba(58,42,32,.12);}
 .ugc-item:hover .ugc-imgwrap{box-shadow:0 16px 34px rgba(58,42,32,.28);}
 .ugc-imgwrap img{width:100%;max-width:100%;height:auto;display:block;}
