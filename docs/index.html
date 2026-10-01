@@ -231,8 +231,11 @@ body {
 .flavor-panels{display:grid;grid-template-columns:repeat(3,1fr);gap:0;max-width:600px;margin:0 auto;
   border-radius:16px;overflow:hidden;box-shadow:0 12px 32px rgba(90,58,26,.14);}
 @media(max-width:560px){.flavor-panels{grid-template-columns:1fr;}}
-.fp{position:relative;padding:30px 14px 20px;display:flex;flex-direction:column;align-items:center;
+.fp{position:relative;overflow:hidden;padding:30px 14px 20px;display:flex;flex-direction:column;align-items:center;
   text-align:center;gap:7px;}
+.fp-bg{position:absolute;right:-8px;bottom:-30px;font-weight:900;line-height:.8;
+  font-size:clamp(96px,26vw,140px);opacity:.13;pointer-events:none;z-index:0;color:currentColor;}
+.fp-label,.fp-no,.fp-name,.fp-pepper,.fp-desc,.fp-tag{position:relative;z-index:1;}
 .fp-1{background:#6F5C43;color:#F2E8D6;}   /* 原味 · 檜木棕 */
 .fp-2{background:#D89F3E;color:#43300F;}   /* 幼幼 · 醬燒金 */
 .fp-3{background:#C56231;color:#FBEEE1;}   /* 特製 · 暖橘 */
@@ -1192,6 +1195,7 @@ html,body,h1,h2,h3,h4,h5,h6,p,div,span,a,strong,em,b,li,button,input,label,.htag
   <div class="band-lbl flavors-lbl"><img class="flavors-title-img" src="photos/flavors-title.png" alt="今天想吃哪一種？"></div>
   <div class="flavor-panels">
     <div class="fp fp-1">
+      <span class="fp-bg">原</span>
       <span class="fp-label">原味</span><span class="fp-no">01</span>
       <div class="fp-name">手路 原味排骨</div>
       <div class="fp-pepper"><span class="lbl">黑胡椒</span><span class="fp-dot on"></span><span class="fp-dot on"></span><span class="fp-dot on"></span></div>
@@ -1199,6 +1203,7 @@ html,body,h1,h2,h3,h4,h5,h6,p,div,span,a,strong,em,b,li,button,input,label,.htag
       <span class="fp-tag">全家大小</span>
     </div>
     <div class="fp fp-2">
+      <span class="fp-bg">幼</span>
       <span class="fp-label">幼幼</span><span class="fp-no">02</span>
       <div class="fp-name">淡味 幼幼排骨</div>
       <div class="fp-pepper"><span class="lbl">黑胡椒</span><span class="fp-dot on"></span><span class="fp-dot"></span><span class="fp-dot"></span></div>
@@ -1206,6 +1211,7 @@ html,body,h1,h2,h3,h4,h5,h6,p,div,span,a,strong,em,b,li,button,input,label,.htag
       <span class="fp-tag">為孩子開發</span>
     </div>
     <div class="fp fp-3">
+      <span class="fp-bg">特</span>
       <span class="fp-label">特製</span><span class="fp-no">03</span>
       <div class="fp-name">特製 零黑胡椒</div>
       <div class="fp-pepper"><span class="lbl">黑胡椒</span><span class="fp-dot"></span><span class="fp-dot"></span><span class="fp-dot"></span></div>
