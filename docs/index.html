@@ -775,11 +775,29 @@ body {
 ════════════════════ */
 .brand-story-full {
   background: var(--paper);
-  padding: 64px 32px 60px;
+  padding: 60px 46px 60px;
   border-bottom: 1px solid rgba(180,150,100,0.12);
   text-align: center;
+  position: relative;
 }
-@media(max-width:600px){ .brand-story-full { padding: 48px 20px 48px; } }
+@media(max-width:600px){ .brand-story-full { padding: 48px 30px 48px; } }
+/* 儀式感雙細框線 */
+.brand-story-full::before{
+  content:''; position:absolute; inset:18px;
+  border:1px solid rgba(123,90,56,.42);
+  pointer-events:none;
+}
+.brand-story-full::after{
+  content:''; position:absolute; inset:23px;
+  border:1px solid rgba(123,90,56,.16);
+  pointer-events:none;
+}
+@media(max-width:600px){
+  .brand-story-full::before{ inset:12px; }
+  .brand-story-full::after{ inset:16px; }
+}
+/* 內容置於框線之上 */
+.brand-story-full > *{ position:relative; z-index:1; }
 
 .bsf-eyebrow {
   font-family:'LXGW WenKai TC','Noto Serif TC',serif; font-weight:700;
