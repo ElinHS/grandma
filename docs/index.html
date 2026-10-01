@@ -372,7 +372,9 @@ body {
   padding:14px 32px; text-align:center;
 }
 .fine p { font-size:11px; color:rgba(220,190,140,0.85); letter-spacing:2px; line-height:2.2; display:flex; align-items:center; justify-content:center; gap:10px; }
-.fine-logo { height:20px; width:auto; display:inline-block; filter:brightness(0) invert(1) sepia(0.5) saturate(2.2) hue-rotate(-8deg) brightness(1.05); opacity:0.92; }
+.fine-mark { display:flex; flex-direction:column; align-items:center; gap:10px; }
+.fine-art { height:58px; width:auto; display:block; filter:brightness(0) invert(1) sepia(0.5) saturate(2.2) hue-rotate(-8deg) brightness(1.05); opacity:0.9; }
+.fine-logo { height:22px; width:auto; display:inline-block; filter:brightness(0) invert(1) sepia(0.5) saturate(2.2) hue-rotate(-8deg) brightness(1.05); opacity:0.92; }
 
 /* reveal */
 .r { opacity:0; transform:translateY(16px); transition:opacity 0.7s ease, transform 0.7s ease; }
@@ -1490,7 +1492,10 @@ html,body,h1,h2,h3,h4,h5,h6,p,div,span,a,strong,em,b,li,button,input,label,.htag
 </section>
 
 <div class="fine">
-  <p><img class="fine-logo" src="photos/logo-red.png" alt="阿嬤家之味">超商冷凍宅配 · 含運 700</p>
+  <div class="fine-mark">
+    <img class="fine-art" src="photos/story-black.png" alt="阿嬤與孫子">
+    <img class="fine-logo" src="photos/logo-red.png" alt="阿嬤家之味">
+  </div>
 </div>
 
 </div>
@@ -1548,15 +1553,15 @@ document.querySelectorAll('.r').forEach(el => obs.observe(el));
 
 <style>
 body{padding-bottom:74px;}
-.sticky-cta{position:fixed;left:0;right:0;bottom:0;z-index:99;max-width:680px;margin:0 auto;background:rgba(247,241,225,.97);backdrop-filter:blur(6px);border-top:1px solid rgba(179,64,42,.18);display:flex;align-items:center;gap:12px;padding:10px 16px;box-shadow:0 -3px 14px rgba(58,42,32,.12);}
-.sticky-cta .p{flex:1;line-height:1.2;min-width:0;}
-.sticky-cta .p b{color:#C23B2E;font-size:18px;font-weight:700;}
-.sticky-cta .p span{display:block;font-size:10.5px;color:var(--ink-soft);}
-.sticky-cta a{flex:0 0 auto;display:inline-flex;align-items:center;gap:8px;background:#06C755;color:#fff;font-weight:700;font-size:16px;padding:10px 20px;border-radius:999px;text-decoration:none;white-space:nowrap;}
+.sticky-cta{position:fixed;left:0;right:0;bottom:0;z-index:99;max-width:680px;margin:0 auto;background:rgba(247,241,225,.97);backdrop-filter:blur(6px);border-top:1px solid rgba(179,64,42,.18);display:flex;align-items:center;gap:10px;padding:10px 14px;box-shadow:0 -3px 14px rgba(58,42,32,.12);}
+.sticky-cta .p{flex:1;line-height:1.2;min-width:0;display:flex;flex-direction:column;align-items:flex-start;gap:3px;}
+.sticky-cta .p .cta-logo{height:22px;width:auto;display:block;}
+.sticky-cta .p b{color:#1A140E;font-size:15px;font-weight:700;white-space:nowrap;}
+.sticky-cta a{flex:0 0 auto;display:inline-flex;align-items:center;gap:6px;background:#06C755;color:#fff;font-weight:700;font-size:14.5px;padding:9px 14px;border-radius:999px;text-decoration:none;white-space:nowrap;}
 .sticky-cta a .line-ico{width:24px;height:24px;background:#fff;border-radius:6px;flex:0 0 auto;}
 </style>
 <div class="sticky-cta">
-  <div class="p"><b>8 片 NT$550 起</b><span>自取550・超商700・黑貓550+運</span></div>
+  <div class="p"><img class="cta-logo" src="photos/logo-black.png" alt="阿嬤家之味"><b>超商自取含運 700 元</b></div>
   <a href="https://lin.ee/SiCQlxb" target="_blank" rel="noopener"><img class="line-ico" src="photos/line-icon.png" alt="LINE">加 LINE 預購</a>
 </div>
 </body>
