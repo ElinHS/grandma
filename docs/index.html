@@ -780,11 +780,11 @@ body {
   position: relative;
 }
 @media(max-width:600px){ .brand-story-full { padding: 44px 20px 540px; } }
-/* 頂部標題維持原樣（保留光暈） */
-.brand-story-full .bsf-eyebrow,
-.brand-story-full .bsf-of{
+/* 頂部標題：LOGO 保留光暈，About Us 不要光暈 */
+.brand-story-full .bsf-eyebrow{
   text-shadow: 0 1px 2px rgba(247,241,225,.95), 0 0 14px rgba(247,241,225,.85);
 }
+.brand-story-full .bsf-of{ text-shadow:none; }
 /* 品牌故事內文：乾淨細黑體，直接壓在牆上、無白框 */
 .brand-story-full .bsf-lead,
 .brand-story-full .bsf-body,
@@ -834,7 +834,7 @@ body {
 .bsf-eyebrow .story-logo { height: 34px; width: auto; display: block; }
 .bsf-of {
   font-family:'LXGW WenKai TC','Noto Serif TC',serif; font-weight:400;
-  font-size: 14px; letter-spacing: 7px; text-indent: 7px;
+  font-size: 13px; letter-spacing: 3px; text-indent: 0;
   color: #C23B2E;
   display: flex; align-items: center; gap: 14px;
 }
@@ -1186,7 +1186,7 @@ html,body,h1,h2,h3,h4,h5,h6,p,div,span,a,strong,em,b,li,button,input,label,.htag
 <section class="brand-story-full r">
   <span class="bsf-dia bsf-dia-top"></span>
   <span class="bsf-dia bsf-dia-bot"></span>
-  <div class="bsf-eyebrow"><img class="story-logo" src="photos/logo-red.png" alt="阿嬤家之味"><span class="bsf-of">的故事</span></div>
+  <div class="bsf-eyebrow"><img class="story-logo" src="photos/logo-red.png" alt="阿嬤家之味"><span class="bsf-of">About Us</span></div>
 
   <div class="bsf-block">
     <div class="bsf-lead">「阿嬤家之味」一開始不叫這個名字。</div>
