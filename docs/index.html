@@ -784,10 +784,18 @@ body {
 .bsf-eyebrow {
   font-family:'LXGW WenKai TC','Noto Serif TC',serif; font-weight:700;
   font-size: 20px; letter-spacing: 3px; color: var(--ink);
-  margin-bottom: 26px;
-  display: flex; align-items: center; justify-content: center; gap: 12px;
+  margin-bottom: 36px;
+  display: flex; flex-direction: column; align-items: center; gap: 12px;
 }
 .bsf-eyebrow::after { content:none; }
+.bsf-eyebrow .story-logo { height: 34px; width: auto; display: block; }
+.bsf-of {
+  font-family:'LXGW WenKai TC','Noto Serif TC',serif; font-weight:400;
+  font-size: 14px; letter-spacing: 7px; text-indent: 7px;
+  color: #C23B2E;
+  display: flex; align-items: center; gap: 14px;
+}
+.bsf-of::before, .bsf-of::after { content:''; display:block; width:26px; height:1px; background:rgba(194,59,46,.38); }
 
 .bsf-block {
   margin-bottom: 22px;
@@ -875,10 +883,10 @@ html,body,h1,h2,h3,h4,h5,h6,p,div,span,a,strong,em,b,li,button,input,label,.htag
 .bsf-eyebrow::before,.band-lbl::before{content:"";display:inline-block;flex:0 0 auto;width:30px;height:26px;background:url(photos/chop.png) center/contain no-repeat;opacity:.9;}
 </style>
 <style id="story-deco">
-.bsf-eyebrow::before{background-image:url(photos/story.png);width:52px;height:45px;}
+.bsf-eyebrow::before{background-image:url(photos/story-red.png);width:64px;height:54px;opacity:1;}
 </style>
 <style id="story-logo-css">
-.bsf-eyebrow .story-logo{height:26px;width:auto;display:inline-block;vertical-align:middle;}
+.bsf-eyebrow .story-logo{height:34px;width:auto;display:block;}
 </style>
 <style id="ugc-eyebrow-css">
 .ugc-eyebrow::before{background-image:url(photos/table.png);width:46px;height:32px;}
@@ -1124,7 +1132,7 @@ html,body,h1,h2,h3,h4,h5,h6,p,div,span,a,strong,em,b,li,button,input,label,.htag
 
 
 <section class="brand-story-full r">
-  <div class="bsf-eyebrow"><img class="story-logo" src="photos/logo-red.png" alt="阿嬤家之味">的故事</div>
+  <div class="bsf-eyebrow"><img class="story-logo" src="photos/logo-red.png" alt="阿嬤家之味"><span class="bsf-of">的故事</span></div>
 
   <div class="bsf-block">
     <div class="bsf-lead">「阿嬤家之味」一開始不叫這個名字。</div>
