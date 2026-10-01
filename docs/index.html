@@ -223,6 +223,9 @@ body {
 }
 .band-lbl::after { content:''; flex:1; height:1px; background:var(--amber-pl); max-width:48px; }
 .flavors-title-img { height:36px; width:auto; display:block; }
+.band-lbl.trust-lbl::before, .band-lbl.trust-lbl::after { content:none !important; display:none !important; }
+.trust-ico { height:50px; width:auto; display:block; flex:0 0 auto; }
+.trust-title-img { height:34px; width:auto; display:block; }
 
 .fg { display:grid; grid-template-columns:repeat(3,1fr); gap:14px; }
 @media(max-width:480px){ .fg { grid-template-columns:1fr; } }
@@ -1176,7 +1179,7 @@ html,body,h1,h2,h3,h4,h5,h6,p,div,span,a,strong,em,b,li,button,input,label,.htag
 
 <!-- ════ TRUST ════ -->
 <div class="trust-band r">
-  <div class="band-lbl">為什麼敢給孩子吃</div>
+  <div class="band-lbl trust-lbl"><img class="trust-ico" src="photos/trust-ico.png" alt=""><img class="trust-title-img" src="photos/trust-title.png" alt="妳能放心給孩子吃"></div>
   <div class="tg">
     <div class="ti">
       <div class="ti-t">台灣溫體豬，僅此一選</div>
