@@ -774,24 +774,26 @@ body {
    BRAND STORY FULL
 ════════════════════ */
 .brand-story-full {
-  background-color: var(--paper);
-  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='150' height='150'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.85' numOctaves='2' stitchTiles='stitch'/%3E%3CfeColorMatrix type='saturate' values='0'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)' opacity='0.05'/%3E%3C/svg%3E");
+  background: #E2D2AC;            /* 牛皮紙卡紙（框外襯底） */
   padding: 60px 46px 60px;
   border-bottom: 1px solid rgba(180,150,100,0.12);
   text-align: center;
   position: relative;
 }
 @media(max-width:600px){ .brand-story-full { padding: 48px 30px 48px; } }
-/* 儀式感雙細框線 */
+/* 儀式感雙細框線＋框內宣紙白內頁（裱框感） */
 .brand-story-full::before{
   content:''; position:absolute; inset:18px;
   border:1px solid rgba(123,90,56,.42);
-  pointer-events:none;
+  background-color: var(--paper);  /* 宣紙白內頁 */
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='150' height='150'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.85' numOctaves='2' stitchTiles='stitch'/%3E%3CfeColorMatrix type='saturate' values='0'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)' opacity='0.05'/%3E%3C/svg%3E");
+  box-shadow: 0 3px 18px rgba(90,58,26,.10);
+  z-index:0; pointer-events:none;
 }
 .brand-story-full::after{
   content:''; position:absolute; inset:23px;
   border:1px solid rgba(123,90,56,.16);
-  pointer-events:none;
+  z-index:0; pointer-events:none;
 }
 @media(max-width:600px){
   .brand-story-full::before{ inset:12px; }
