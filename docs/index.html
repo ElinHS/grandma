@@ -773,13 +773,21 @@ body {
    BRAND STORY FULL
 ════════════════════ */
 .brand-story-full {
-  background: #8A7658 url(photos/story-bg.jpg) center bottom/cover no-repeat;  /* 暖調照片襯底 */
-  padding: 60px 46px 60px;
+  background: #8A7658 url(photos/story-bg.jpg) center bottom/cover no-repeat;  /* 牆面照片 */
+  padding: 54px 34px 560px;
   border-bottom: 1px solid rgba(180,150,100,0.12);
   text-align: center;
   position: relative;
 }
-@media(max-width:600px){ .brand-story-full { padding: 48px 30px 48px; } }
+@media(max-width:600px){ .brand-story-full { padding: 44px 20px 540px; } }
+/* 文字直接貼在牆面，用光暈確保可讀 */
+.brand-story-full .bsf-eyebrow,
+.brand-story-full .bsf-of,
+.brand-story-full .bsf-lead,
+.brand-story-full .bsf-body,
+.brand-story-full .bsf-closing{
+  text-shadow: 0 1px 2px rgba(247,241,225,.95), 0 0 14px rgba(247,241,225,.85);
+}
 /* 儀式感雙細框線＋框內宣紙白內頁（裱框感） */
 .brand-story-full::before{
   content:''; position:absolute; inset:18px;
@@ -795,10 +803,10 @@ body {
   border:1px solid rgba(123,90,56,.16);
   z-index:0; pointer-events:none;
 }
-@media(max-width:600px){
-  .brand-story-full::before{ inset:12px; }
-  .brand-story-full::after{ inset:16px; }
-}
+/* 拿掉外框線、宣紙頁背景與菱形 */
+.brand-story-full::before,
+.brand-story-full::after{ display:none !important; }
+.bsf-dia{ display:none !important; }
 /* 內容置於框線之上 */
 .brand-story-full > *{ position:relative; z-index:1; }
 /* 上下框線中央小菱形 */
@@ -879,18 +887,21 @@ body {
   background: var(--amber);
   margin: 0 auto 26px;
 }
+.bsf-endmark{
+  position:absolute; left:0; right:0; bottom:442px;
+  text-align:center; z-index:2; pointer-events:none;
+}
 .bsf-endlogo {
   display: block;
-  width: 150px; max-width: 52%;
-  height: auto;
-  margin: 34px auto 0;
+  width: 150px; max-width: 46%;
+  height: auto; margin: 0 auto;
 }
 .bsf-endart {
   display: block;
-  width: 116px; max-width: 42%;
-  height: auto;
-  margin: 14px auto 0;
+  width: 104px; max-width: 34%;
+  height: auto; margin: 10px auto 0;
 }
+@media(max-width:600px){ .bsf-endmark{ bottom:365px; } }
 
 </style>
 <style id="taipei-font">
@@ -1191,8 +1202,10 @@ html,body,h1,h2,h3,h4,h5,h6,p,div,span,a,strong,em,b,li,button,input,label,.htag
     畢竟，<br>阿嬤不會給你吃加了防腐劑的料理。<br>她會把肉醃好，等你回家，<br>現煎給你吃。<br><br>現在，我們做阿嬤做的那一半，<br>用好料把肉醃透。<br>剩下的那一半，<br>在你家的廚房讓你自己完成。
   </div>
 
-  <img class="bsf-endlogo" src="photos/logo-red.png" alt="阿嬤家之味">
-  <img class="bsf-endart" src="photos/story-red.png" alt="阿嬤與孫子">
+  <div class="bsf-endmark">
+    <img class="bsf-endlogo" src="photos/logo-black.png" alt="阿嬤家之味">
+    <img class="bsf-endart" src="photos/story-black.png" alt="阿嬤與孫子">
+  </div>
 </section>
 
 <!-- ════ FLAVORS ════ -->
