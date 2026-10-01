@@ -824,8 +824,8 @@ body {
 .bsf-of::before, .bsf-of::after { content:''; display:block; width:26px; height:1px; background:rgba(194,59,46,.38); }
 
 .bsf-block {
-  margin-bottom: 22px;
-  padding-bottom: 22px;
+  margin-bottom: 14px;
+  padding-bottom: 14px;
   border-bottom: 1px solid rgba(180,150,100,0.1);
 }
 .bsf-block:last-child { border-bottom: none; margin-bottom: 0; padding-bottom: 0; }
@@ -834,16 +834,16 @@ body {
   font-family: 'LXGW WenKai TC','Noto Serif TC',serif;
   font-size: clamp(16px,3vw,20px);
   color: var(--ink);
-  line-height: 1.85;
+  line-height: 1.5;
   letter-spacing: 0.5px;
-  margin-bottom: 10px;
+  margin-bottom: 6px;
 }
 
 .bsf-body {
   font-family: 'LXGW WenKai TC','Noto Serif TC',serif;
   font-size: clamp(13.5px,2.3vw,15px);
   color: var(--ink-mid);
-  line-height: 2.0;
+  line-height: 1.55;
   letter-spacing: 0.4px;
 }
 .bsf-body strong {
@@ -856,8 +856,8 @@ body {
   font-weight: 600;
 }
 
-/* 最後兩段：行距減半、更好閱讀 */
-.bsf-block:last-of-type .bsf-lead { line-height: 1.5; }
+/* 最後兩段：行距再收緊 */
+.bsf-block:last-of-type .bsf-lead { line-height: 1.45; }
 .bsf-block:last-of-type .bsf-body { line-height: 1.5; }
 
 .bsf-closing {
@@ -865,10 +865,10 @@ body {
   font-size: clamp(18px,3.4vw,21px);   /* 大兩級 */
   font-weight: 700;                     /* 加粗 */
   color: var(--ink);
-  line-height: 1.55;                    /* 行距減半 */
+  line-height: 1.45;                    /* 行距再收緊 */
   letter-spacing: 0.5px;
   text-align: center;
-  padding: 24px 16px 6px;
+  padding: 20px 16px 6px;
   margin-top: 6px;
 }
 .bsf-closing strong, .bsf-closing b { font-weight: 700; }
@@ -1164,25 +1164,25 @@ html,body,h1,h2,h3,h4,h5,h6,p,div,span,a,strong,em,b,li,button,input,label,.htag
 
   <div class="bsf-block">
     <div class="bsf-lead">「阿嬤家之味」一開始不叫這個名字。</div>
-    <div class="bsf-body">它是「社區裡一位退休阿嬤做的手工排骨」。<br>在天母的媽媽社群裡，一個傳一個傳出來的。</div>
+    <div class="bsf-body">它是「社區裡一位退休阿嬤做的手工排骨」。在天母的媽媽社群裡，一個傳一個傳出來的。</div>
   </div>
 
   <div class="bsf-block">
     <div class="bsf-lead">七年多前，第一次開團。</div>
-    <div class="bsf-body">原本只是想和大家分享自家人喜歡的這個味道。<br>沒想到，過年一檔，賣掉<strong>超過一千片</strong>。<br>沒有宣傳，只有一群媽媽在替另一個媽媽背書。</div>
+    <div class="bsf-body">原本只是想和大家分享自家人喜歡的這個味道。沒想到，過年一檔，賣掉<strong>超過一千片</strong>。<br>沒有宣傳，只有一群媽媽在替另一個媽媽背書。</div>
   </div>
 
   <div class="bsf-block">
-    <div class="bsf-body">後來有媽媽跟我們說，黑胡椒太重，小孩不敢吃。<br>阿嬤就把配方拆開重調，做出減量的<strong>「幼幼淡味排骨」</strong>，<br>還有完全不加黑胡椒的<strong>「特製排骨」</strong>。<br>兩種新口味，都是客人問出來的。</div>
+    <div class="bsf-body">後來有媽媽跟我們說，黑胡椒太重，小孩不敢吃。阿嬤就把配方拆開重調，做出減量的<strong>「幼幼淡味排骨」</strong>，<br>還有完全不加黑胡椒的<strong>「特製排骨」</strong>。兩種新口味，都是客人問出來的。</div>
   </div>
 
   <div class="bsf-block">
     <div class="bsf-lead">七年來，有些事我們一直沒改。</div>
-    <div class="bsf-body">只用台灣溫體豬。當日屠宰，當日製作。<br>沒有食品代工廠必須要的化學添加、防腐劑、嫩肉精。<br>每一批肉都是小量進來，手工醃製、手工拍打，<br>做完再一單一單交出去。<br>這雖然不是效率最高的做法，<em>這卻是我們覺得最接近原型食物的那一種。</em></div>
+    <div class="bsf-body">只用台灣溫體豬。當日屠宰，當日製作。沒有食品代工廠必須要的化學添加、防腐劑、嫩肉精。<br>每一批肉都是小量進來，手工醃製、手工拍打，做完再一單一單交出去。<br>這雖然不是效率最高的做法，<em>這卻是我們覺得最接近原型食物的那一種。</em></div>
   </div>
 
   <div class="bsf-closing">
-    畢竟，阿嬤從來不會給你吃<br>有太多添加物的排骨。<br>她會把肉醃好，等你回家，<br>現煎給你吃。<br><br>現在，我們做阿嬤做的那一半，<br>用好料把肉醃透。<br>剩下的那一半，在你家的鍋裡完成。
+    畢竟，阿嬤從來不會給你吃有太多添加物的排骨。<br>她會把肉醃好，等你回家，現煎給你吃。<br><br>現在，我們做阿嬤做的那一半，用好料把肉醃透。<br>剩下的那一半，在你家的鍋裡完成。
   </div>
 
   <img class="bsf-endlogo" src="photos/logo-red.png" alt="阿嬤家之味">
