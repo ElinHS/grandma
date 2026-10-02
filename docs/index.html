@@ -96,20 +96,44 @@ body {
 
 /* trust tags — horizontal on logo band */
 .hero-trust {
-  display: flex; flex-wrap:wrap; gap:8px; justify-content:center;
-  flex: 1 1 100%; margin-top: 4px;
+  display: flex; flex-wrap:wrap; gap:16px 8px; justify-content:center; align-items:center;
+  flex: 1 1 100%; margin-top: 8px;
+}
+/* 依筆刷粗細/字寬微調各張高度，讓視覺字級更一致；整體放大 */
+.htag-brush { width: auto; display: block; }
+.hero-trust .htag-brush:nth-child(1){ height: 33px; }  /* 台灣豬：粗大，縮小 */
+.hero-trust .htag-brush:nth-child(2){ height: 42px; }  /* 天然原型食物 */
+.hero-trust .htag-brush:nth-child(3){ height: 36px; }  /* 厚切扎實 */
+.hero-trust .htag-brush:nth-child(4){ height: 46px; }  /* 氣炸上桌：最窄，放大 */
+@media(max-width:480px){
+  .hero-trust { gap: 13px 6px; }
+  .hero-trust .htag-brush:nth-child(1){ height: 28px; }
+  .hero-trust .htag-brush:nth-child(2){ height: 36px; }
+  .hero-trust .htag-brush:nth-child(3){ height: 31px; }
+  .hero-trust .htag-brush:nth-child(4){ height: 40px; }
 }
 .htag {
   font-size: 13px;
   font-weight: 500;
   letter-spacing: 1.5px;
-  background: rgba(179,64,42,0.07);
+  background: rgba(247,241,225,0.55);
   color: var(--seal);
-  padding: 7px 15px;
-  border-radius: 999px;
+  border: 1.4px solid rgba(179,64,42,0.42);
+  padding: 6px 14px;
+  border-radius: 7px;
   white-space: nowrap;
   line-height: 1.5;
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
 }
+.htag::before {
+  content: none;
+  font-size: 11px;
+  font-weight: 700;
+  color: #C23B2E;
+}
+.htag svg { width: 17px; height: 17px; flex: 0 0 auto; }
 @media(max-width:480px){
   .htag { font-size: 13px; padding: 7px 14px; }
 }
@@ -962,10 +986,10 @@ html,body,h1,h2,h3,h4,h5,h6,p,div,span,a,strong,em,b,li,button,input,label,.htag
       <img class="logo-img" src="photos/hero-logo.webp" alt="阿嬤家之味 排骨專賣 Logo" fetchpriority="high" decoding="async">
     </div>
     <div class="hero-trust r">
-      <span class="htag">嚴選台灣溫體豬</span>
-      <span class="htag">零防腐劑零香料</span>
-      <span class="htag">厚切口感Ｑ彈扎實</span>
-      <span class="htag">氣炸15分鐘輕鬆上桌</span>
+      <img class="htag-brush" src="photos/htag-1.webp" alt="台灣豬" decoding="async">
+      <img class="htag-brush" src="photos/htag-2.webp" alt="天然原型食物" decoding="async">
+      <img class="htag-brush" src="photos/htag-3.webp" alt="厚切扎實" decoding="async">
+      <img class="htag-brush" src="photos/htag-4.webp" alt="氣炸 15 分鐘上桌" decoding="async">
     </div>
   </div><!-- /hero-logo-band -->
 </section>
